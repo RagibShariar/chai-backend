@@ -1,10 +1,16 @@
+// require('dotenv').config({ path: './env' });
+import dotenv from "dotenv";
 import express from "express";
-import mongoose from "mongoose";
-import { DB_NAME } from "./constants";
+import connectDB from "./DB/index.js";
 
 const app = express();
+dotenv.config({ path: "./env" });
 
+// MongoDB database connection
+connectDB();
 
+/* 
+  not an efficient way to connect to the database
 // database connection using IIFE (Immediately Invoked Function Expression)
 (async () => {
   try {
@@ -24,3 +30,4 @@ const app = express();
     throw error;
   }
 })();
+*/
