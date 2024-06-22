@@ -1,0 +1,8 @@
+/* 
+* The database is always in another continent, so use async await
+* Always wrap database connection in try catch block.
+*
+* CORS -> Cross Origin Resource Sharing
+* 
+
+*/
